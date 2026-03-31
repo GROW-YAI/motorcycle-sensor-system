@@ -27,3 +27,17 @@ declare module "*.svg" {
   const value: string;
   export default value;
 }
+
+// Vite environment variables
+interface ImportMetaEnv {
+  readonly VITE_BOAFO_API_KEY: string;
+  readonly MODE: string;
+  readonly BASE_URL: string;
+  readonly PROD: boolean;
+  readonly DEV: boolean;
+  readonly BUILD: boolean;
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
